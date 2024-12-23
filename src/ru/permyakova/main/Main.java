@@ -59,11 +59,11 @@ public class Main {
 
         // Объединение списков чисел
         List<Integer> resultIntegers = integerJoinList.JoinLists(L1, L2);
-        System.out.println("Объединённый список чисел: " + resultIntegers);
+        out.println("Объединённый список чисел: " + resultIntegers);
 
         // Объединение списков строк
         List<String> resultStrings = stringJoinList.JoinLists(L1Strings, L2Strings);
-        System.out.println("Объединённый список строк: " + resultStrings);
+        out.println("Объединённый список строк: " + resultStrings);
 
         // ------------------------------------ 4 - 3 -------------------------------------------------
 
@@ -75,8 +75,8 @@ public class Main {
         if (topOfBest == null || topOfBest.isEmpty()) return;
 
         // Печать топ-3 участников
-        System.out.println("Тройка лучших:");
-        for (String e : topOfBest) System.out.println(e);
+        out.println("Тройка лучших:");
+        for (String e : topOfBest) out.println(e);
 
         // ------------------------------------ 5 - 3 -------------------------------------------------
 
@@ -96,13 +96,13 @@ public class Main {
         out.println("------------------------------------ 6 - 3 -------------------------------------------------");
 
         List<Integer> intList = Arrays.asList(1, 2, 3, 1);
-        System.out.println("Для списка чисел (1, 2, 3, 1): " + CircularList.hasEqual(intList));
+        out.println("Для списка чисел (1, 2, 3, 1): " + CircularList.hasEqual(intList));
 
         List<String> stringList = Arrays.asList("apple", "banana", "apple", "apple");
-        System.out.println("Для списка строк(\"apple\", \"banana\", \"apple\", \"apple\"): " + CircularList.hasEqual(stringList));
+        out.println("Для списка строк(\"apple\", \"banana\", \"apple\", \"apple\"): " + CircularList.hasEqual(stringList));
 
         List<String> stringList2 = Arrays.asList("apple", "banana", "cherry");
-        System.out.println("Для списка строк(\"apple\", \"banana\", \"cherry\"): " + CircularList.hasEqual(stringList2));
+        out.println("Для списка строк(\"apple\", \"banana\", \"cherry\"): " + CircularList.hasEqual(stringList2));
 
         // ------------------------------------ 7 - 1 -------------------------------------------------
 
@@ -124,7 +124,7 @@ public class Main {
                 "                (-6.5, -4),\n" +
                 "                (2, 3),\n" +
                 "                (2.3, 3.5)");
-        System.out.println(polyline);
+        out.println(polyline);
 
         // ------------------------------------ 7 - 2 -------------------------------------------------
 
@@ -137,7 +137,7 @@ public class Main {
         if (groupPep == null || topOfBest.isEmpty()) return;
 
         // Вывод
-        System.out.println("Наш списочек:");
+        out.println("Наш списочек:");
         groupPep.forEach((key, value) -> out.println(key + ": " + value));
     }
 }
