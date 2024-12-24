@@ -28,7 +28,7 @@ public class Consonants {
                     }
                 }
 
-                // Добавляем найденные согласные в карту
+                // Добавляем найденные согласные в словарь
                 for (char c : wordConsonants) {
                     consonantWords
                             .computeIfAbsent(c, k -> new HashSet<>())
