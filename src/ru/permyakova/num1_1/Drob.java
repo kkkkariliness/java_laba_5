@@ -25,7 +25,7 @@ public class Drob implements UseDrob {
     }
 
     // Сравнение двух дробей
-    public boolean equal(Object obj) {
+    public boolean equals(Object obj) {
         if (this == obj) return true;
         if (obj == null || getClass() != obj.getClass()) return false;
 
