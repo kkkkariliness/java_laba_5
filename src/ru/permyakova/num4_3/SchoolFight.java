@@ -16,6 +16,11 @@ public class SchoolFight {
             List<String> lines = Files.readAllLines(Paths.get(fileName));
             int n = Integer.parseInt(lines.getFirst());
 
+            // Проверяем, что n <= 100
+            if (n > 100) {
+                throw new IllegalArgumentException("Количество записей больше 100");
+            }
+
             // Обрабатываем остальные строки
             for (int i = 1; i <= n; i++) {
                 String line = lines.get(i);
@@ -41,6 +46,8 @@ public class SchoolFight {
             System.err.println("Ошибка чтения файла: " + e.getMessage());
         } catch (NumberFormatException e) {
             System.err.println("Некорректный формат данных: " + e.getMessage());
+        } catch (IllegalArgumentException e) {
+            System.err.println("Ошибка: " + e.getMessage());
         }
 
         // Сортируем участников по набранным баллам в порядке убывания
